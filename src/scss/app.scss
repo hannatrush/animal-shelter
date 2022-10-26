@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0;
+    padding: 0;
+    background: #f6f6f6;
+}
+
+.header-container {
+    padding-top: 32;
+    padding-bottom: 30px;
+    margin: 0;
+    background: #fafafa;
+    
+}
+
+.header-inner {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left {
+    padding: 0;
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-between ;
+    list-style: none;
+    margin-top: 50px;
+}
+
+.logo-text {
+    font-size: 13px;
+    font-family: "Arial";
+    color: rgb(41, 41, 41);
+}
+
+.logo {
+    margin-top: 32px;
+    font-weight: normal;
+    font-size: 32px;
+    font-family: "Georgia";
+    color: rgb(84, 84, 84); 
+    margin-bottom: 15px;
+    padding: bottom 0; 
+}
+
+a {
+    text-decoration: none;
+    font-size: 15pt;
+    font-family: "Arial";
+    color: rgb(84, 84, 84);
+    padding-left: 40px;
+
+    &:hover {
+        text-decoration: underline 7px #f1cdb3;
+    }
+}
+
+.category {
+    display: flex;
+    list-style: none;
+    margin: 0;
+
+    li {
+        font-size: 15pt;
+        font-family: "Georgia";
+        color: rgb(84, 84, 84);
+        margin: 25px 10px 30px ;
+        padding: 8px 30px;
+        border: 2px solid #f1cdb3;
+        border-radius: 30px;
+        background-color: #fafafa;
+    
+        &:hover {
+            background-color: #f1cdb3;
+            cursor: pointer;
+        } 
+    }
+
+    .active {
+        background-color: #f1cdb3;
+    }
+}
+
+.pets-container {
+    width: 1170px;
+    margin: 72px auto 65px;
+}
+
+h2 {
+    margin: 0 auto;
+    font-weight: normal;
+    text-align: center;
+    font-size: 35px;
+    font-family: "Georgia";
+    color: rgb(84, 84, 84);
+}
+
+.pets-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pets-item {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fafafa;
+    padding-bottom: 35px;
+    margin: 0 auto 35px;
+    border-radius: 10px;
+}
+
+ .button {
+    padding: 20px 50px;
+    border: 2px solid #f1cdb3;
+    border-radius: 30px;
+    background-color: #fafafa;
+    font-size: 17px;
+    font-family: "Georgia";
+    color: rgb(41, 41, 41);
+    text-align: center;
+    margin: 0 auto;
+
+    &:hover {
+        background-color: #f1cdb3;
+        cursor: pointer;
+    } 
+}
+
+.name {
+    font-size: 20px;
+    font-family: "Georgia";
+    color: rgb(84, 84, 84);
+    text-align: center;
+    margin: 30px auto 20px;
+    padding: 0;
+}
+
+.counters {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.count_page {
+    background: #f6f6f6;
+    border: 3px solid #f1cdb3;
+    border-radius: 50%;
+    margin: 0 8px;
+    font-size: 20px;
+    font-family: "Times New Roman";
+    color: rgb(41, 41, 41);
+}
+
+.count_page:hover {
+    cursor: pointer;
+    background: #f1cdb3;
+}
+
+.one {
+    padding: 18px 25px;
+}
+
+.double {
+    padding: 18px 20px;
+}
+
+.empty_space {
+    color: #f1cdb3;
+    font-weight: bolder;
+}
+
+.footer-container {
+    margin: 0;
+    padding: 0;
+    background: rgb(76,62,54);
+    background: linear-gradient(90deg, rgba(76,62,54,1) 49%, rgba(25,25,27,1) 100%);
+}
+
+.footer-inner {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item {
+    display: grid;
+    padding: 0;
+    margin-top: 83px;
+    padding-bottom: 20px;
+}
+
+.footer-text {
+    font-size: 35px;
+    font-family: "Georgia";
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.contact {
+    display: flex;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Times New Roman";
+    color: rgb(241, 205, 179);
+    text-align: left;
+}
+.contact-text {
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    height: 30px;
+    padding: 0;
+    margin-right: 25px;
+    
+    path {
+        fill: rgb(241, 205, 179);
+    }
+}
+
