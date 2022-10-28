@@ -1,8 +1,8 @@
-function PetBlock() {
+function PetBlock({imageUrl, name}) {
     return (
         <div className="pets-item">
-          <img className="main_img" src="img/Cat.png" alt=""/>
-          <p className="name">Katrine</p>
+          <img className="main_img" src={imageUrl} alt=""/>
+          <p className="name">{name}</p>
           <a href="#" className="button">Learn more</a>
         </div>
     )

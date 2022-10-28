@@ -63,19 +63,26 @@ a {
     }
 }
 
+.sortby-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
 .category {
     display: flex;
     list-style: none;
     margin: 0;
+    padding-left: 5px;
 
     li {
-        font-size: 15pt;
+        font-size: 17px;
         font-family: "Georgia";
         color: rgb(84, 84, 84);
-        margin: 25px 10px 30px ;
+        margin: 0 7px 20px ;
         padding: 8px 30px;
         border: 2px solid #f1cdb3;
-        border-radius: 30px;
+        border-radius: 25px;
         background-color: #fafafa;
     
         &:hover {
@@ -92,6 +99,58 @@ a {
 .pets-container {
     width: 1170px;
     margin: 72px auto 65px;
+}
+
+.sort {
+    position: relative;
+    font-family: "Georgia";
+    color: rgb(84, 84, 84);
+    padding-right: 20px;
+    margin-top: 5px;
+}
+
+.sort-container {
+    display: flex;
+    align-items: center;
+
+    svg {
+        margin-right: 8px;
+    }
+
+    .sort-text {
+        margin-right: 8px;
+    }
+
+    .sort-chosen {
+        font-weight: bold;
+        color: #eabc9a;
+        cursor: pointer;
+    }
+}
+
+.sort-popup {
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    background:#fafafa;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+
+    ul {
+      overflow: hidden;
+      list-style: none;
+      padding: 0;
+      li {
+        padding: 12px 30px;
+        cursor: pointer;
+
+        &:hover {
+          background: #f1cdb3;
+        }
+      }
+    }
 }
 
 h2 {
@@ -223,6 +282,7 @@ h2 {
     color: rgb(241, 205, 179);
     text-align: left;
 }
+
 .contact-text {
     margin: 0;
     padding: 0;
