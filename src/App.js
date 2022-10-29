@@ -8,6 +8,8 @@ import Sort from './components/Sort';
 
 import PetBlock from './components/PetBlock';
 
+import PetModal from './components/PetModal';
+
 import Footer from './components/Footer';
 
 import pets from './scss/assets/pets.json';
