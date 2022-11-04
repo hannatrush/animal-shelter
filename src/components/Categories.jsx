@@ -1,12 +1,10 @@
 import React from 'react';
 
-function Categories() {
-  const [activeCategory, setActiveCategory] = React.useState(0);
-
+function Categories({activeCategory, onChangeCategory}) {
   const categories = ['All', 'Cats', 'Dogs'];
 
   const changeCategory = (index) => {
-    setActiveCategory(index);
+    onChangeCategory(index);
   }
 
   return (

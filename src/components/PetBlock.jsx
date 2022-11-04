@@ -8,9 +8,11 @@ function PetBlock({imageUrl, name}) {
         <div className="pets-item">
           <img className="main_img" src={imageUrl} alt=""/>
           <p className="name">{name}</p>
-          <a onClick={() => setModalActive(true)} href="#" className="button">Learn more</a>
+          <a onClick={(e) =>
+           {e.preventDefault();
+           setModalActive(true);}} href="#" className="button">Learn more</a>
           {
-            modalActive && <PetModal modalActive={modalActive} setModalActive={setModalActive}/>
+            modalActive && <PetModal name={name} modalActive={modalActive} setModalActive={setModalActive}/>
           }
         </div>
     )
