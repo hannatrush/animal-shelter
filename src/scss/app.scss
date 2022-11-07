@@ -10,7 +10,7 @@ body {
 }
 
 .header-container {
-    padding-top: 32;
+    padding-top: 10px;
     padding-bottom: 30px;
     margin: 0;
     background: #fafafa;
@@ -26,6 +26,9 @@ body {
 
 .header-left {
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header-right {
@@ -39,6 +42,7 @@ body {
     font-size: 13px;
     font-family: "Arial";
     color: rgb(41, 41, 41);
+    margin: 0;
 }
 
 .logo {
@@ -47,8 +51,8 @@ body {
     font-size: 32px;
     font-family: "Georgia";
     color: rgb(84, 84, 84); 
-    margin-bottom: 15px;
-    padding: bottom 0; 
+    margin-bottom: 10px;
+    padding: 0; 
 }
 
 a {
@@ -239,15 +243,17 @@ h2 {
     font-weight: bolder;
 }
 
-
-
-
-
-
-
-
+.modal-wrapper{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 
 .pet-modal {
+    max-width: 942px;
+    width: 100%;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -259,15 +265,15 @@ h2 {
     border-radius: 9px;
     box-shadow: 0px 2px 30.1px 4.9px rgba(13, 13, 13, 0.04);
     transition: 0.5s;
-
 }
 
 .pet {
-    height: 450px;
+    height: 430px;
 }
 
 .modal-text  {
     padding: 0 40px;
+    flex-grow: 1;
 
     ul {
         margin-left: 15px;
@@ -350,13 +356,6 @@ h2 {
         fill: rgb(76, 76, 76);
     }
 }
-
-
-
-
-
-
-
 
 .footer-container {
     margin: 0;
