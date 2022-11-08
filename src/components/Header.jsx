@@ -1,16 +1,18 @@
+import {Link} from 'react-router-dom';
+
 function Header() {
     return (
       <div className="header-container">
         <div className="header-inner">
-          <div className="header-left">
+          <Link className="header-logo" to='/'>
             <h3 className="logo">Cozy House</h3>
             <p className="logo-text">Shelter for pets in Boston</p>
-          </div>
-          <ul className="header-right">
-            <li><a href="#">About the shelter</a></li>
-            <li><a href="#">Our pets</a></li>
-            <li><a href="#">To help the shelter</a></li>
-            <li><a href="#">Contacts</a></li>
+          </Link>
+          <ul className="header-menu">
+            <li><Link className='menu' to='#' >About the shelter</Link></li>
+            <li><Link className='menu' to='/pets' >Our pets</Link></li>
+            <li><Link className='menu' to='#' >To help the shelter</Link></li>
+            <li><Link className='menu' to='#' >Contacts</Link></li>
           </ul>
         </div>
       </div>

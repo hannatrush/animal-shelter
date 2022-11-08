@@ -24,18 +24,15 @@ body {
     justify-content: space-between;
 }
 
-.header-left {
+.header-logo {
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.header-right {
-    display: flex;
-    justify-content: space-between ;
-    list-style: none;
-    margin-top: 50px;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .logo-text {
@@ -53,6 +50,13 @@ body {
     color: rgb(84, 84, 84); 
     margin-bottom: 10px;
     padding: 0; 
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between ;
+    list-style: none;
+    margin-top: 50px;
 }
 
 a {

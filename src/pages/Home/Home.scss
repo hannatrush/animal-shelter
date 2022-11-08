@@ -1,0 +1,223 @@
+.home-container {
+    padding: 0;
+    background: linear-gradient(90deg, rgba(76,62,54,1) 0%, #1a1a1c 100%);
+}
+
+.home-box {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.img-home {
+    height: 600px;
+}
+
+.home-text {
+    padding: 0;
+    margin: 0 auto;
+
+    h3 {
+        margin: 150px auto 0;
+        font-size: 44px;
+        font-family: "Georgia";
+        font-weight: 300;
+        color: rgb(255, 255, 255);
+        text-align: left;
+    }
+
+    p {
+        font-size: 15px;
+        font-family: "Arial";
+        color: rgb(205, 205, 205);
+        margin: 45px auto 65px;
+        line-height: 24px;
+    }
+}
+
+.home-header-button {
+    border: 2px solid #f1cdb3;
+    border-radius: 30px;
+    font-size: 17px;
+    font-family: "Georgia";
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+    padding: 15px 40px;
+
+    &:hover {
+    cursor: pointer;
+    background-color: #f1cdb3;
+    color: #292929;
+    }
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 35px;
+    font-family: "Georgia";
+    color: rgb(84, 84, 84);
+    margin: 0 auto;
+}
+
+.home-about-box {
+    background: #fafafa;
+}
+
+.home-about {
+    max-width: 830px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 95px 0;
+}
+
+.home-about-items{
+margin-top: 40px;
+}
+
+.home-about-text{
+    font-size: 15px;
+    font-family: "Arial";
+    color: rgb(76, 76, 76);
+    font-weight: normal;
+    margin-top: 35px;
+}
+
+.home-pets-box {
+    max-width: 1170px;
+    margin: 75px auto 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-pets {
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.main_items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow-button {
+    padding: 12px 5px;
+    background: #f6f6f6;
+    border: 2px solid #f1cdb3;
+    border-radius: 50%;
+
+    &:hover{
+        background: #f1cdb3;
+        cursor: pointer;
+    }
+
+    svg {
+       margin: 0; 
+       path {
+        fill: rgb(84, 84, 84);
+       }
+    }
+}
+
+.button-to-pets {
+    margin:66px auto 0;
+    padding: 20px 30px;
+    background: #f6f6f6;
+    border: 2px solid #f1cdb3;
+    border-radius: 30px;
+    font-size: 17px;
+    font-family: "Georgia";
+    color: rgb(41, 41, 41);  
+    
+    &:hover {
+        cursor: pointer;
+        background: #f1cdb3;
+    }
+}
+
+.home-help-box {
+    background: #fafafa;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 75px;
+}
+
+.help-items {
+    max-width: 1030px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 75px auto 0;
+}
+
+.help-item {
+    flex-basis: 200px;
+    margin-bottom: 84px;
+}
+
+.img-help {
+    height: 55px;
+    margin-bottom: 30px;
+}
+
+.help-item-text {
+    font-size: 20px;
+    font-family: "Georgia";
+    color: rgb(84, 84, 84);
+}
+
+.home-addition-box {
+    max-width: 1140px;
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 86px;
+    padding-top: 73px;
+}
+
+.img-addition {
+    margin-right: 62px;
+    height: 272px;
+    margin-top: 45px;
+}
+
+.bank {
+    font-size: 15px;
+    font-family: "Georgia";
+    color: rgb(84, 84, 84);
+    margin-top: 36px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px;
+    background: #f1cdb3;
+    border-radius: 10px;
+}
+
+.img-card {
+    height: 24px;
+    margin-right: 7px;
+}
+
+.card-number {
+    font-size: 20px;
+    font-family: "Times New Roman";
+    color: rgb(41, 41, 41);
+    margin: 0;
+    padding: 0;
+}
+
+.addition-text {
+    font-size: 12px;
+    font-family: "Arial";
+    color: rgb(178, 178, 178);
+    font-style: italic;
+    margin-top: 34px;
+}
