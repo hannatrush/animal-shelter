@@ -11,7 +11,7 @@ function Header() {
           <ul className="header-menu">
             <li><Link className='menu' to='#' >About the shelter</Link></li>
             <li><Link className='menu' to='/pets' >Our pets</Link></li>
-            <li><Link className='menu' to='#' >To help the shelter</Link></li>
+            <li><Link className='menu' to='/help' >To help the shelter</Link></li>
             <li><Link className='menu' to='#' >Contacts</Link></li>
           </ul>
         </div>
