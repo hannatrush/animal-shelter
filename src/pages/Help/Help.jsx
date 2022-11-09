@@ -7,7 +7,7 @@ import './Help.scss';
 function Help() {
     return (
         <>
-            <div className='help-top'>
+            <div className='page-top'>
                 <h3>How to help the shelter</h3>
             </div>
             <div className="adoption-container">
