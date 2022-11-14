@@ -1,0 +1,114 @@
+.contact-container {
+    background: #fafafa;
+    padding: 75px 0 75px;
+}
+
+.contact-box {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.contact-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: center;
+
+    svg {
+        margin: 0 10px 10px 0;
+    }
+     
+    p {
+        font-size: 15px;
+        font-family: "Arial";
+        color: rgb(76, 76, 76);
+        font-weight: normal;
+        margin: 5px 0 0;
+    }
+}
+
+
+
+.form-box {
+    padding: 65px 0 75px;
+    display: flex;
+    justify-content: center;
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+}
+
+input {
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    &:focus {
+        outline: none;
+    }
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-input{
+    padding: 0 50px;
+    height: 50px;
+}
+
+.email-field {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.message-field {
+    margin-top: 15px;
+    width: 100%;
+    height: 130px;
+    font-family: "Arial";
+    color: rgb(76, 76, 76);
+    font-weight: normal;
+}
+
+.message-button {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    background: #f1cdb3;
+    border: #f1cdb3;
+
+    &:hover {
+        cursor: pointer;
+        border:1px solid rgb(84, 84, 84);
+    }
+}
+
+.type-error {
+    height: 15px;
+    margin: 0; 
+    font-size: 12px;
+    font-family: "Arial";
+    color: rgb(186, 70, 38);
+
+    p {
+        margin: 5px 0  0;
+    }
+}
+
+
+.map-container {
+    width: 100%;
+    height: 400px;
+
+}
