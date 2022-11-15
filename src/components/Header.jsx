@@ -12,7 +12,7 @@ function Header() {
             <li><Link className='menu' to='/about' >About the shelter</Link></li>
             <li><Link className='menu' to='/pets' >Our pets</Link></li>
             <li><Link className='menu' to='/help' >To help the shelter</Link></li>
-            <li><Link className='menu' to='#' >Contacts</Link></li>
+            <li><Link className='menu' to='/contacts' >Contacts</Link></li>
           </ul>
         </div>
       </div>
