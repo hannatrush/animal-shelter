@@ -17,13 +17,17 @@ function FeedbackForm() {
     return (
         <form className="feedback" onSubmit={handleSubmit(onSubmit)}>
             <div className="user-info">
-                <div className="user-field">
+                <div className="input-field-wrapper">
                     <input 
-                        className="user-input"
+                        className="user-field"
                         type="text"
                         placeholder="First Name*"
                         {...register('firstName', {
                             required: 'Required field!',
+                            pattern: {
+                                value: /^[ а-яА-Яa-zA-Z\-\’]+$/,
+                                message: 'Invalid data.'
+                            },
                             minLength: {
                                 value: 2,
                                 message: 'Less than 2 symbols!'
@@ -33,15 +37,15 @@ function FeedbackForm() {
                         {errors?.firstName && <p>{errors?.firstName?.message || 'Error!'}</p>}
                     </div>
                 </div>
-                <div className="user-field">
+                <div className="input-field-wrapper">
                     <input 
-                        className="user-input" 
+                        className="user-field" 
                         type="text" 
                         placeholder="Last Name*"
                         {...register('lastName', {
                             required: 'Required field!',
                             pattern: {
-                                value: /[A-Za-z]{2}/,
+                                value: /^[ а-яА-Яa-zA-Z\-\’]+$/,
                                 message: 'Invalid data.'
                             },
                             minLength: {
@@ -54,28 +58,33 @@ function FeedbackForm() {
                     </div>
                 </div>
             </div>
-            <input 
-                className="email-field" 
-                type="email" 
-                placeholder="Your Email*"
-                {...register('email', {
-                required: 'Required field!',
-                pattern: {
-                    value:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-                    message: 'Invalid email address.'}
-                })} />
+            <div className="input-field-wrapper">
+                <input 
+                    className="email-field" 
+                    type="email" 
+                    placeholder="Your Email*"
+                    {...register('email', {
+                    required: 'Required field!',
+                    pattern: {
+                        value:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+                        message: 'Invalid email address.'}
+                    })} 
+                />
                 <div className="type-error">
                     {errors?.email && <p>{errors?.email?.message || 'Error!'}</p>}
                 </div>
-            <textarea 
-                className="message-field" 
-                placeholder="Message*"
-                {...register('userMessage', {
-                    required: 'Required field!',
-                })}>   
-            </textarea>
-            <div className="type-error">
-                {errors?.userMessage && <p>{errors?.userMessage?.message || 'Error!'}</p>}
+            </div>
+            <div className="input-field-wrapper">
+                <textarea 
+                    className="message-field" 
+                    placeholder="Message*"
+                    {...register('userMessage', {
+                        required: 'Required field!',
+                    })}>   
+                </textarea>
+                <div className="type-error">
+                    {errors?.userMessage && <p>{errors?.userMessage?.message || 'Error!'}</p>}
+                </div>
             </div>
             <button className="message-button" type="submit" disabled={isValid}>Send Message</button>
         </form> 

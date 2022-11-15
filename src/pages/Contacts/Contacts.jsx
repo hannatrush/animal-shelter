@@ -1,5 +1,5 @@
 import FeedbackForm from '../../components/FeedbackForm';
-import Map from '../../components/Map';
+import Map from '../../components/Map/Map';
 
 import './Contacts.scss';
 
