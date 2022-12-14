@@ -1,0 +1,28 @@
+.arrow-rotate {
+    transform: rotate(180deg);
+}
+
+.arrow-button {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f6f6f6;
+    border: 2px solid #f1cdb3;
+    border-radius: 50%;
+
+    &:hover{
+        background: #f1cdb3;
+        cursor: pointer;
+    }
+
+    svg {
+       margin: 0;
+       height: 20px; 
+       path {
+        fill: rgb(84, 84, 84);
+       }
+    }
+}

@@ -1,10 +1,20 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { setModalItem } from '../../redux/slices/modalSlice';
 
-function PetModal({name, imageUrl, age, type, setModalActive}) {
+import './petModal.scss'
+
+function PetModal({name, imageUrl, age, type}) {
+    const dispatch = useDispatch();
+    
+    const onClickCloseModal = () => {
+        dispatch(setModalItem(null));
+    }
+
    return(
     <div className='modal-wrapper'>
         <div className="pet-modal">
-            <button className="close" onClick={() =>setModalActive(false)}>
+            <button className="close" onClick={() => onClickCloseModal()}>
             <svg className="x" data-name="Layer 1" height="200" id="Layer_1" viewBox="0 0 200 200" width="200"><title/><path d="M114,100l49-49a9.9,9.9,0,0,0-14-14L100,86,51,37A9.9,9.9,0,0,0,37,51l49,49L37,149a9.9,9.9,0,0,0,14,14l49-49,49,49a9.9,9.9,0,0,0,14-14Z"/></svg>
             </button>
             <img className="pet" src={imageUrl} alt=""/>

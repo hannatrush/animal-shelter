@@ -1,12 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { fetchPets } from '../../redux/slices/petSlice';
 
 import PetBlock from '../../components/PetBlock';
+import PetModal from '../../components/PetModal/PetModal';
 import Donation from '../../components/Donation';
+import BasicSlider from '../../components/Slider';
+import { petSlider } from '../../components/Slider/settings';
 
 import './Home.scss';
 
 function Home() {
+  const dispatch = useDispatch();
+  const { pets } = useSelector((state) => state.pets);
+  const {modalItem} = useSelector( (state) => state.modal);
+
+  const getPetItems = async() => {
+    const currentPage = 2;
+    const category = '';
+    const sortBy = '';
+  
+    dispatch(fetchPets({category, sortBy, currentPage}))
+  }
+
+  React.useEffect(() => {
+    getPetItems();
+  }, []);
+
   return (
   <>
     <div className="home-container">
@@ -40,15 +62,13 @@ function Home() {
     <div className="home-pets-box">
         <h3>Our friends <br/>who are looking for a house</h3>
         <div className="home-pets">
-            <button className='arrow-button'>
-            <svg height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="50px"><path d="M189.3,128.4L89,233.4c-6,5.8-9,13.7-9,22.4c0,8.7,3,16.5,9,22.4l100.3,105.4c11.9,12.5,31.3,12.5,43.2,0  c11.9-12.5,11.9-32.7,0-45.2L184.4,288h217c16.9,0,30.6-14.3,30.6-32c0-17.7-13.7-32-30.6-32h-217l48.2-50.4  c11.9-12.5,11.9-32.7,0-45.2C220.6,115.9,201.3,115.9,189.3,128.4z"/></svg>
-              </button>
-            <div className="main_items">
-                <PetBlock/>
-            </div>
-            <button className='arrow-button'>
-              <svg height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="50px"><path d="M322.7,128.4L423,233.4c6,5.8,9,13.7,9,22.4c0,8.7-3,16.5-9,22.4L322.7,383.6c-11.9,12.5-31.3,12.5-43.2,0  c-11.9-12.5-11.9-32.7,0-45.2l48.2-50.4h-217C93.7,288,80,273.7,80,256c0-17.7,13.7-32,30.6-32h217l-48.2-50.4  c-11.9-12.5-11.9-32.7,0-45.2C291.4,115.9,310.7,115.9,322.7,128.4z"/></svg>
-            </button>
+          { (pets.length !== 0 ) && <BasicSlider settings={petSlider()}>
+            {pets.map((obj) => <PetBlock key={obj.id} {...obj} />)}
+            </BasicSlider>
+          } 
+          {
+            (modalItem !== null) && <PetModal {...modalItem}/>
+          }                
         </div>
         <Link className='button-to-pets' to="/pets">Get to know the rest</Link>
     </div>

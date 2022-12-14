@@ -1,21 +1,27 @@
 import React from 'react';
-import PetModal from './PetModal';
+import { useDispatch } from 'react-redux';
 
-function PetBlock({imageUrl, name, age, type}) {
-  const [modalActive, setModalActive] = React.useState(false);
+import { setModalItem } from '../redux/slices/modalSlice';
 
-    return (
-        <div className="pets-item">
-          <img className="main_img" src={imageUrl} alt=""/>
-          <p className="name">{name}</p>
-          <a onClick={(e) =>
-           {e.preventDefault();
-           setModalActive(true);}} href="#" className="button">Learn more</a>
-          {
-            modalActive && <PetModal imageUrl={imageUrl} name={name} age={age} type={type} setModalActive={setModalActive}/>
-          }
-        </div>
-    )
+function PetBlock({imageUrl, name, age, type }) {
+  const dispatch = useDispatch();
+ 
+  const onClickModal = (...obj) => {
+    dispatch(setModalItem(...obj));
+  }
+
+  return (
+    <div className="pets-item">
+      <img className="main_img" src={imageUrl} alt=""/>
+      <p className="name">{name}</p>
+      <a href="#" 
+        className="button"
+        onClick={(e) => {
+          e.preventDefault();
+          onClickModal({imageUrl, name, age, type})}}
+        >Learn more</a>
+    </div>
+  )    
 }
 
 export default PetBlock;

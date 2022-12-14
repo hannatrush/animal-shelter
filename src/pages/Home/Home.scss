@@ -43,7 +43,7 @@
     font-family: "Georgia";
     color: rgb(255, 255, 255);
     margin: 0 auto;
-    padding: 15px 40px;
+    padding: 15px 45px;
 
     &:hover {
     cursor: pointer;
@@ -78,7 +78,7 @@ margin-top: 40px;
 
 .home-pets-box {
     max-width: 1170px;
-    margin: 75px auto 65px;
+    margin: 65px auto 65px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,40 +86,14 @@ margin-top: 40px;
 }
 
 .home-pets {
-    max-width: 1170px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 70px;
-}
-
-.main_items {
-    display: flex;
-    justify-content: space-between;
-}
-
-.arrow-button {
-    padding: 12px 5px;
-    background: #f6f6f6;
-    border: 2px solid #f1cdb3;
-    border-radius: 50%;
-
-    &:hover{
-        background: #f1cdb3;
-        cursor: pointer;
-    }
-
-    svg {
-       margin: 0; 
-       path {
-        fill: rgb(84, 84, 84);
-       }
-    }
+    max-width: 910px;
+    margin: 65px auto 25px;
+    text-align: left;
 }
 
 .button-to-pets {
-    margin:66px auto 0;
-    padding: 20px 30px;
+    margin: 0 auto;
+    padding: 18px 50px;
     background: #f6f6f6;
     border: 2px solid #f1cdb3;
     border-radius: 30px;

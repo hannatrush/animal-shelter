@@ -1,16 +1,19 @@
 import React from 'react';
 import { useSelector, useDispatch} from 'react-redux';
+
 import { setActiveCategory, setCurrentPage } from '../redux/slices/filterSlice';
-import axios from 'axios';
+import { fetchPets } from '../redux/slices/petSlice';
 
 import Categories from '../components/Categories';
 import Sort from '../components/Sort';
 import PetBlock from '../components/PetBlock';
+import PetModal from '../components/PetModal/PetModal';
 import Pagination from '../components/Pagination';
 
 function Pets() {
-    const [pets, setItems] = React.useState([]);
     const dispatch = useDispatch();
+    const { pets } = useSelector((state) => state.pets);
+    const {modalItem} = useSelector( (state) => state.modal);
     const {activeCategory, sort, currentPage} = useSelector((state) => state.filter);
 
     const onChangeCategory = (id) => {
@@ -18,24 +21,21 @@ function Pets() {
     };
 
     const onChangePage = (number) => {
-      dispatch(setCurrentPage(number))
+      dispatch(setCurrentPage(number));
     }
 
-    React.useEffect( () => {
-      const params = {
-        sex: sort > 0 ? sort : null,
-        category: activeCategory > 0 ? activeCategory : null
-      };
-
-        axios
-        .get(`https://6304d33c761a3bce77f07e90.mockapi.io/pets?page=${currentPage}&limit=8`, {
-          params
-        })
-        .then((res) => {
-          setItems(res.data);
-        })
-        window.scrollTo(0, 0);
-      }, [activeCategory, sort, currentPage])
+    const getPets = async () => {
+      const category = activeCategory > 0 ? `&category=${activeCategory}` : ''; 
+      const sortBy = sort > 0 ? `&sex=${sort}` : ''; 
+     
+      dispatch(fetchPets({ category, sortBy, currentPage}));
+  
+      window.scrollTo(0, 0);
+    }
+    
+    React.useEffect( () => { 
+      getPets();
+    }, [activeCategory, sort, currentPage]);
     
     return (
         <div className="pets-container">
@@ -45,9 +45,10 @@ function Pets() {
           <Sort/>
         </div>
         <div className="pets-items">
-          { pets.map( (obj) => 
-          <PetBlock key={obj.id} {...obj}/>
-          )}
+          { pets.map( (obj) => <PetBlock key={obj.id} {...obj}/>)}
+          {
+            (modalItem !== null) && <PetModal {...modalItem}/>
+          }
         </div>
        <Pagination currentPage={currentPage} onChangePage={onChangePage}/>
     </div>
