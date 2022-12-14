@@ -16,14 +16,6 @@ body {
 
 a {
     text-decoration: none;
-    // font-size: 15pt;
-    // font-family: "Arial";
-    // color: rgb(84, 84, 84);
-    // padding-left: 40px;
-
-    // &:hover {
-    //     text-decoration: underline 7px #f1cdb3;
-    // }
 }
 
 .sortby-box{
@@ -152,6 +144,11 @@ h3 {
     position: relative;
 }
 
+.main-img {
+    height: 250px;
+    width: 250px;
+}
+
  .button {
     padding: 20px 50px;
     border: 2px solid #f1cdb3;
@@ -238,24 +235,22 @@ h3 {
     font-family: "Times New Roman";
     color: rgb(241, 205, 179);
     text-align: left;
+
+    svg {
+        height: 30px;
+        padding: 0;
+        margin-right: 25px;
+            
+        path {
+            fill: rgb(241, 205, 179);
+        }    
+    }
 }
 
 .contact-text {
     margin: 0;
     padding: 0;
 }
-
-svg {
-    height: 30px;
-    padding: 0;
-    margin-right: 25px;
-    
-    path {
-        fill: rgb(241, 205, 179);
-    }
-}
-
-
 
 //slick slider 
 .slick-list {

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchPets } from '../../redux/slices/petSlice';
 
 import PetBlock from '../../components/PetBlock';
+import Skeleton from '../../components/PetBlock/skeleton';
 import PetModal from '../../components/PetModal/PetModal';
 import Donation from '../../components/Donation';
 import BasicSlider from '../../components/Slider';
@@ -14,7 +15,7 @@ import './Home.scss';
 
 function Home() {
   const dispatch = useDispatch();
-  const { pets } = useSelector((state) => state.pets);
+  const { pets, status } = useSelector((state) => state.pets);
   const {modalItem} = useSelector( (state) => state.modal);
 
   const getPetItems = async() => {
@@ -28,6 +29,9 @@ function Home() {
   React.useEffect(() => {
     getPetItems();
   }, []);
+
+  const petItems = pets.map( (obj) => <PetBlock key={obj.id} {...obj}/>);
+  const skeletons = [...new Array(4)].map((_, index ) => <Skeleton key = {index}/>);
 
   return (
   <>
@@ -63,7 +67,7 @@ function Home() {
         <h3>Our friends <br/>who are looking for a house</h3>
         <div className="home-pets">
           { (pets.length !== 0 ) && <BasicSlider settings={petSlider()}>
-            {pets.map((obj) => <PetBlock key={obj.id} {...obj} />)}
+            {status === 'loading' ? skeletons : petItems }
             </BasicSlider>
           } 
           {

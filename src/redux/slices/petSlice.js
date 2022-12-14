@@ -25,12 +25,15 @@ const petSlice = createSlice({
     extraReducers: {
         [fetchPets.pending]: (state) => {
             state.pets = [];
+            state.status = 'loading';
         },
         [fetchPets.fulfilled]: (state, action) => {
             state.pets = action.payload;
+            state.status = 'completed';
         },
         [fetchPets.rejected]: (state) => {
             state.pets = [];
+            state.status = 'error';
         }
     }
 })

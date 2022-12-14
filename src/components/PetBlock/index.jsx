@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { setModalItem } from '../redux/slices/modalSlice';
+import { setModalItem } from '../../redux/slices/modalSlice';
 
 function PetBlock({imageUrl, name, age, type }) {
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ function PetBlock({imageUrl, name, age, type }) {
 
   return (
     <div className="pets-item">
-      <img className="main_img" src={imageUrl} alt=""/>
+      <img className="main-img" src={imageUrl} alt=""/>
       <p className="name">{name}</p>
       <a href="#" 
         className="button"
