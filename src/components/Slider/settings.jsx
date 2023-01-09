@@ -18,30 +18,33 @@ export const petSlider = () => {
         slidesToShow: 3,
         nextArrow: <Arrow classNames='arrow-rotate' customStyle={{ top: '38%', right: '-95px' }} />,
         prevArrow: <Arrow customStyle={{ top: '38%', left: '-95px' }} />,
+        autoplay: true,
         responsive: [
-            // {
-            //   breakpoint: 1200,
-            //   settings: {
-            //     slidesToShow: 2,
-            //     nextArrow: <Arrow classNames='arrow-rotate' customStyle={{ top: '38%', right: '-95px' }} />,
-            //     prevArrow: <Arrow customStyle={{ top: '38%', left: '-95px' }} />,
-            //   },
-            // },
-            // {
-            //   breakpoint: 950,
-            //   settings: {
-            //     slidesToShow: 2,
-            //     arrows: false,
-            //     autoplay: true,
-            //   },
-            // },
-            // {
-            //   breakpoint: 600,
-            //   settings: {
-            //     slidesToShow: 1,
-            //     arrows: false,
-            //   },
-            // },
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 2,
+                nextArrow: <Arrow classNames='arrow-rotate' customStyle={{ top: '38%', right: '-95px' }} />,
+                prevArrow: <Arrow customStyle={{ top: '38%', left: '-95px' }} />,
+                autoplay: true,
+              },
+            },
+            {
+              breakpoint: 950,
+              settings: {
+                slidesToShow: 2,
+                arrows: false,
+                autoplay: true,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                arrows: false,
+                autoplay: true,
+              },
+            },
           ],
     };
 }

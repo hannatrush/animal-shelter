@@ -43,16 +43,18 @@ function Pets() {
     
     return (
         <div className="pets-container">
-        <h2>Our friends <br/>who are looking for a house</h2>
-        <div className='sortby-box'>
-          <Categories activeCategory={activeCategory} onChangeCategory={onChangeCategory}/>
-          <Sort/>
-        </div>
-        <div className="pets-items">
-          {status === 'loading' ? skeletons : petItems }
-          {
-            (modalItem !== null) && <PetModal {...modalItem}/>
-          }
+          <div className="page-top">
+            <h3>Our friends <br/>who are looking for a house</h3>
+          </div>
+          <div className='sortby-box'>
+            <Categories activeCategory={activeCategory} onChangeCategory={onChangeCategory}/>
+            <Sort/>
+          </div>
+          <div className="pets-items">
+            {status === 'loading' ? skeletons : petItems }
+            {
+              (modalItem !== null) && <PetModal {...modalItem}/>
+            }
         </div>
        <Pagination currentPage={currentPage} onChangePage={onChangePage}/>
     </div>

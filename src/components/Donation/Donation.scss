@@ -4,12 +4,34 @@
     margin: 0 auto;
     padding-bottom: 86px;
     padding-top: 73px;
+
+    @media (max-width: 1200px) {
+        padding: 73px 25px 86px;
+    }
+
+    @media (max-width: 950px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .img-addition {
     margin-right: 62px;
     height: 272px;
     margin-top: 45px;
+
+    @media (max-width: 1200px) {
+        margin: 0 0 45px;
+    }
+
+    @media (max-width: 600px) {
+        height: 160px;
+    }
+}
+
+.addition-items {
+    padding-left: 50px;
 }
 
 .bank {
