@@ -13,6 +13,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 auto;
     }
 }
 
@@ -32,6 +33,10 @@
 
 .addition-items {
     padding-left: 50px;
+
+    @media (max-width: 950px) {
+       padding: 0;
+    }
 }
 
 .bank {

@@ -2,6 +2,10 @@
     background: #fafafa;
     text-align: center;
     padding: 75px 0 75px;
+
+    @media (max-width: 950px) {
+        padding: 50px 25px 50px;
+    }
 }
 
 .about-history-box {
@@ -15,8 +19,33 @@
     font-family: "Arial";
     color: rgb(76, 76, 76);
     font-weight: normal;
-    margin-top: 35px;
+    margin: 35px 0 20px;
     line-height: 23px;
+}
+
+.counters{
+    display: flex;
+    justify-content: space-around;
+}
+
+.counter {
+    text-align: center;
+}
+
+.counter-number{
+    font-size: 50px;
+    font-family: "Arial";
+    color: #f1cdb3;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.counter-text {
+    font-size: 25px;
+    font-family: "Georgia";
+    color:  rgb(84, 84, 84);
+    font-weight: normal;
+    margin: 0;
 }
 
 .about-activity-container {
@@ -24,6 +53,10 @@
     margin: 0 auto;
     padding: 75px 0 75px;
     text-align: center;
+
+    @media (max-width: 950px) {
+        padding: 50px 25px 50px;
+    }
 }
 
 .activity-text {

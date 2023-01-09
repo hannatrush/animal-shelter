@@ -1,3 +1,5 @@
+import CountUp from 'react-countup';
+
 import './About.scss';
 
 function About() {
@@ -17,13 +19,33 @@ function About() {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit deleniti fugit laboriosam dignissimos architecto voluptates numquam, blanditiis ut reiciendis corrupti itaque accusantium sint non nulla animi quasi enim? Voluptatibus similique est dolores nostrum, nobis tenetur maiores alias, dolorem sapiente consequuntur necessitatibus placeat blanditiis ad error quis! Enim perferendis laudantium odio ullam, aliquam asperiores voluptatem fugit, itaque natus necessitatibus quisquam blanditiis. Libero excepturi quia sed eos inventore doloribus aspernatur dolore aperiam. Nihil adipisci suscipit asperiores! Amet alias iste molestias a error? Ullam pariatur animi sed, esse distinctio odio repellat? Aut sequi consequuntur dolorem nulla veritatis adipisci vel dicta earum, modi tempora maiores libero recusandae, voluptatibus, voluptates unde harum ut nisi ex rerum a in provident dignissimos? Ex, quos. Doloribus, quod.
                         </p>
                     </div>
+                    <div className="counters">
+                        <div className="counter">
+                            <p className='counter-number'>
+                                <CountUp  start={0} end={10} duration={2} delay={0} enableScrollSpy={true} scrollSpyOnce={true}/>
+                            </p>
+                            <p className='counter-text'>Years</p>
+                        </div>
+                        <div className="counter">
+                            <p className='counter-number'>
+                                <CountUp  start={0} end={193} duration={2} delay={0} enableScrollSpy={true} scrollSpyOnce={true}/>
+                            </p>
+                            <p className='counter-text'>Volunteers</p>
+                        </div>
+                        <div className="counter">
+                            <p className='counter-number'>
+                                <CountUp  start={0} end={567} duration={2} delay={0} enableScrollSpy={true} scrollSpyOnce={true}/>
+                            </p>
+                            <p className='counter-text'>Animals</p>
+                        </div>
+                    </div> 
                 </div>
             </div>
             <div className="about-activity-container">
                 <h3>What we do</h3>
                 <div className="activity-text">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur blandit condimentum. Proin accumsan lorem vel gravida fringilla. Suspendisse potenti. Mauris ut pulvinar nunc. Donec consectetur, diam in porta tempus, urna ligula vestibulum nibh, ac ornare felis justo nec leo. Praesent mattis nibh quis ultrices pharetra. Morbi tempus at ante sit amet tristique. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce efficitur blandit condimentum. Suspendisse potenti. Mauris ut pulvinar nunc. Donec consectetur, diam in porta tempus, urna ligula vestibulum nibh, ac ornare felis justo nec leo. Praesent mattis nibh quis ultrices pharetra. Morbi tempus at ante sit amet tristique. 
                 </p> 
                 <ul>
                     <li>dolor sit amet consectetur adipisicing elit</li>
@@ -33,7 +55,7 @@ function About() {
                     <li>laboriosam mollitia</li>
                 </ul>
                 <p>
-                Praesent quis tortor faucibus, tristique ante vitae, dignissim lorem. Sed at ligula et sem mattis gravida ac vel erat. Ullam pariatur animi sed, esse distinctio odio repellat? Aut sequi consequuntur dolorem nulla veritatis adipisci vel dicta earum, modi tempora maiores libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse pariatur fugiat alias necessitatibus obcaecati ab nostrum dolores cupiditate animi tenetur non commodi ex nobis dolorem beatae voluptate, corporis a dolorum rem neque maxime inventore quis expedita distinctio. Modi dolore ipsum reiciendis voluptatibus doloribus et, quia maxime, dolores nostrum, vitae enim dicta doloremque. Pariatur quibusdam dicta fugiat iste ipsum ea error, fuga minus. Dolorem tempora accusantium molestias eos? Itaque, quos alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni obcaecati libero debitis tempora pariatur, quo voluptas soluta sequi nam consequuntur, eos facilis? Aliquam velit unde hic. Vel veritatis debitis, dolores temporibus harum quae error nihil hic maxime tempore consequuntur ipsam.
+                Praesent quis tortor faucibus, tristique ante vitae, dignissim lorem. Sed at ligula et sem mattis gravida ac vel erat. Ullam pariatur animi sed, esse distinctio odio repellat? Aut sequi consequuntur dolorem nulla veritatis adipisci vel dicta earum, modi tempora maiores libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse pariatur fugiat alias necessitatibus obcaecati ab nostrum dolores cupiditate animi tenetur non commodi ex nobis dolorem beatae voluptate, corporis a dolorum rem neque maxime inventore quis expedita distinctio. Dolorem tempora accusantium molestias eos? Itaque, quos alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni obcaecati libero debitis tempora pariatur, quo voluptas soluta sequi nam consequuntur, eos facilis? Aliquam velit unde hic. Vel veritatis debitis, dolores temporibus harum quae error nihil hic maxime tempore consequuntur ipsam.
                 </p>
                 </div>
             </div>
