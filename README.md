@@ -1,5 +1,4 @@
-### Welcome! The website is live at [https://animal-shelter.up.railway.app/](https://animal-shelter.up.railway.app/), thanks for checking it out!
-
+# Welcome! The website is live at [https://animal-shelter.up.railway.app/](https://animal-shelter.up.railway.app/), thanks for checking it out!
 
 # Getting Started with Create React App
 
