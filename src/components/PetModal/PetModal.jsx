@@ -34,6 +34,7 @@ function PetModal({name, imageUrl, age, type}) {
                 </div>
             </div>
         </div>
+        <div className="back-drop" onClick={() => onClickCloseModal()} ></div>
     </div>
    ) 
 }

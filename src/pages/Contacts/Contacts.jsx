@@ -32,7 +32,7 @@ function Contacts() {
                     <div className="form-box">
                         <FeedbackForm/>  
                     </div>
-                    {/* <Map/> */}
+                    <Map/>
                 </div>
             </div>
         </>
