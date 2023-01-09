@@ -5,7 +5,7 @@
     "dockerfilePath": "Dockerfile"
   },
   "deploy": {
-    "startCommand": "timeout 1m nginx -g 'daemon off;'",
-    "restartPolicyType": "ON_FAILURE"
+    "startCommand": "timeout 30m nginx -g 'daemon off;'",
+    "restartPolicyType": "NEVER"
   }
 }
