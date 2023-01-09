@@ -32,7 +32,7 @@ function FeedbackForm() {
                                 value: 2,
                                 message: 'Less than 2 symbols!'
                             }
-                        })} />
+                    })} />
                     <div className="type-error">
                         {errors?.firstName && <p>{errors?.firstName?.message || 'Error!'}</p>}
                     </div>
@@ -52,7 +52,7 @@ function FeedbackForm() {
                                 value: 2,
                                 message: 'Less than 2 symbols!'
                             }
-                        })} />
+                    })} />
                     <div className="type-error">
                         {errors?.lastName && <p>{errors?.lastName?.message || 'Error!'}</p>}
                     </div>
@@ -86,7 +86,7 @@ function FeedbackForm() {
                     {errors?.userMessage && <p>{errors?.userMessage?.message || 'Error!'}</p>}
                 </div>
             </div>
-            <button className="message-button" type="submit" disabled={isValid}>Send Message</button>
+            <button className="message-button" type="submit" disabled={!isValid}>Send Message</button>
         </form> 
     )
 }

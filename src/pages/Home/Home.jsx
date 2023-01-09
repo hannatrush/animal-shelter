@@ -39,7 +39,7 @@ function Home() {
         <div className="home-box">
           <div className="home-info">
             <div className="home-text">
-              <h3 className="up-i-h" >Not only people <br/>need a house</h3>
+              <h2 className="up-i-h" >Not only people <br/>need a house</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida <br/>est in porttitor  porttitor. Duis sodales elementum ipsum, vehicula <br/>condimentum erat fringilla et.
               </p>
