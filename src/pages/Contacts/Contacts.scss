@@ -75,30 +75,6 @@
     flex-direction: column;  
 }
 
-.input-field-wrapper {
-    position: relative;
-}
-
-.type-error {
-    position: absolute;
-    margin: 0; 
-    font-size: 12px;
-    font-family: "Arial";
-    color: rgb(232, 124, 10);
-
-    p {
-        margin: 3px 0  0;
-    }
-}
-
-input {
-    border: 1px solid rgb(76, 76, 76);
-    border-radius: 10px;
-    &:focus {
-        outline: none;
-    }
-}
-
 textarea {
     border: 1px solid rgb(76, 76, 76);
     border-radius: 10px;

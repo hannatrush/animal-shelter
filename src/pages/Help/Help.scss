@@ -53,10 +53,12 @@
 }
 
 .adoption-button {
+    background: transparent;
     border: 2px solid #f1cdb3;
     border-radius: 30px;
     font-size: 17px;
     font-family: "Georgia";
+    font-weight: normal;
     color: #292929;
     padding: 15px 40px;
 
@@ -90,10 +92,11 @@
     padding: 70px 0 70px;
 }
 
-.volunteer-box{
+.be-volunteer-box{
     max-width: 830px;
     margin: 0 auto;
     text-align: center;
+    padding: 0;
 
     @media (max-width: 950px) {
         padding: 0 35px;
@@ -154,19 +157,36 @@
         margin: 0;
         line-height: 23px;
     }
+
+    h4 {
+        text-align: center;
+        padding: 35px 0 20px;
+        font-weight: normal;
+        font-size: 25px;
+        font-family: "Georgia";
+        color: rgb(84, 84, 84);
+        margin: 0;
+    }
 }
 
-.contact-us-link {
-    font-size: 18px;
-    font-family: "Georgia";
-    font-weight: 550;    
-    color: rgb(84, 84, 84);
-    text-decoration: underline;
-    margin: 0;
-    padding: 0;
+.time {
+    text-align: center;
+}
 
-    &:hover {
-        text-decoration: none;
-        color:#f1cdb3;
+.become-volunteer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0  75px;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+    }
+
+    p {
+        font-family: 'Georgia';
+        font-size: 17px;
     }
 }
